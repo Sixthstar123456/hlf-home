@@ -11,7 +11,7 @@ import {
   Phone,
   MessageCircle,
   Mail,
-  Contact,
+  PhoneCall,
   FileQuestion,
   Menu,
   X,
@@ -60,7 +60,7 @@ export default function Header() {
       <div className="w-full flex justify-center py-2 px-4 pt-6 pb-4">
         <div className="w-full max-w-screen-xl px-4 text-xs font-semibold flex flex-wrap items-center justify-center gap-4 md:justify-end md:gap-8 text-center md:text-left">
           <TopBarLink icon={<MapPin className="h-4 w-4" />} text="Locate us" />
-          <TopBarLink icon={<Contact className="h-4 w-4" />} text="Contact us" />
+          <TopBarLink icon={<PhoneCall className="h-4 w-4" />} text="Contact us" />
           <TopBarLink icon={<FileQuestion className="h-4 w-4" />} text="FAQ" />
           <TopBarLink text="SUPPORT" />
         </div>
@@ -106,12 +106,10 @@ export default function Header() {
 
             {/* Right Icons */}
             <div className="hidden md:flex items-center gap-5 text-gray-700">
-              <Link href="#"><Phone className="w-5 h-5 hover:text-[#002f6c]" /></Link>
-              <Link href="#"><MessageCircle className="w-5 h-5 hover:text-[#002f6c]" /></Link>
-              <Link href="#"><Mail className="w-5 h-5 hover:text-[#002f6c]" /></Link>
+           
               <Link
                 href="#"
-                className="bg-[#06a6dd] text-white px-6 py-2.5 rounded-md font-semibold hover:bg-yellow-300"
+                className="bg-[#06a6dd] text-white px-6 py-2.5 rounded-md font-semibold hover:bg-blue-700"
               >
                 Pay Now
               </Link>
