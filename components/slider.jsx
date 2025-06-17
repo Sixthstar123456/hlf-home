@@ -64,7 +64,7 @@ export default function FinancingSlider() {
   }
 
   return (
-    <div className="relative w-full max-w-[1600px] h-[584px] mx-auto overflow-hidden ">
+<div className="relative w-full max-w-[1600px] aspect-[2.54] mx-auto overflow-hidden">
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
@@ -83,7 +83,7 @@ export default function FinancingSlider() {
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex space-x-2">
+      {/* <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -95,7 +95,7 @@ export default function FinancingSlider() {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Slides */}
       <AnimatePresence initial={false} custom={direction} mode="wait">
