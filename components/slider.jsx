@@ -6,18 +6,22 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
 const slides = [
-  {
-    id: 1,
-    image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1749812757/home-01_nij8jd.jpg',
-  },
-  {
-    id: 2,
-    image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1749812760/home-05_kh6wox.jpg',
-  },
-  {
-    id: 3,
-    image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1749812819/home-04_ypfgak.jpg',
-  },
+  { id: 1, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161750/5_rsiwa2.jpg' },
+  { id: 2, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161750/6_pb0rpn.jpg' },
+  { id: 3, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161750/17_lfpsvy.jpg' },
+  { id: 4, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/7_fcpdco.jpg' },
+  { id: 5, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/16_l5ue1b.jpg' },
+  { id: 6, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/8_jotawl.jpg' },
+  { id: 7, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/2_s4v9fc.jpg' },
+  { id: 8, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/1_omixm9.jpg' },
+  { id: 9, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/4_e9wbcv.jpg' },
+  { id: 10, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/9_agtakb.jpg' },
+  { id: 11, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/12_qj6d4z.jpg' },
+  { id: 12, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/15_k2ruuo.jpg' },
+  { id: 13, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/11_dqfuyl.jpg' },
+  { id: 14, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/10_afkmsh.jpg' },
+  { id: 15, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/13_tp5nxa.jpg' },
+  { id: 16, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/3_ucgkri.jpg' },
 ]
 
 export default function FinancingSlider() {
@@ -60,14 +64,14 @@ export default function FinancingSlider() {
   }
 
   return (
-    <div className="relative w-full aspect-[22/9] sm:aspect-[21/9] lg:aspect-[24/9] overflow-hidden">
+    <div className="relative w-full max-w-[1600px] h-[584px] mx-auto overflow-hidden ">
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
         className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 rounded-full p-2"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-2 w-2 sm:h-8 sm:w-8 lg:h-8 lg:w-8 text-white" />
+        <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
       </button>
 
       <button
@@ -75,7 +79,7 @@ export default function FinancingSlider() {
         className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 rounded-full p-2"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-2 w-2 sm:h-8 sm:w-8 lg:h-8 lg:w-8 text-white" />
+        <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
       </button>
 
       {/* Slide Indicators */}
@@ -87,9 +91,7 @@ export default function FinancingSlider() {
               setDirection(index > currentSlide ? 1 : -1)
               setCurrentSlide(index)
             }}
-            className={`w-2.5 h-2.5 rounded-full ${
-              index === currentSlide ? 'bg-white' : 'bg-white/50'
-            }`}
+            className={`w-2.5 h-2.5 rounded-full ${index === currentSlide ? 'bg-white' : 'bg-white/50'}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
@@ -112,8 +114,10 @@ export default function FinancingSlider() {
               src={slides[currentSlide].image}
               alt={`Slide ${currentSlide + 1}`}
               fill
-              className="object-cover"
+              className="object-contain sm:object-cover"
               priority
+              quality={100}
+              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1600px"
             />
           </div>
         </motion.div>
