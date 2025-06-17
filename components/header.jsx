@@ -70,7 +70,7 @@ export default function Header() {
       <div className="w-full flex justify-center mt-2">
         <div className="relative w-full max-w-screen-xl" ref={productRef}>
           <div className="bg-gray-100 text-black px-4 sm:px-6 md:px-12 py-5 rounded-2xl flex items-center justify-between shadow-md flex-wrap md:flex-nowrap">
-            {/* Left - Logo */}
+            {/* Logo */}
             <div className="flex items-center gap-4 md:gap-12 w-full md:w-auto">
               <Link href="/" className="relative">
                 <Image
@@ -90,7 +90,7 @@ export default function Header() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8 text-[15px]">
+            <nav className="hidden md:flex items-center gap-8 text-[15px] text-gray-700">
               <button
                 onClick={() => setShowProducts((prev) => !prev)}
                 className="relative cursor-pointer hover:text-[#002f6c] flex items-center gap-1"
@@ -104,14 +104,14 @@ export default function Header() {
               <Link href="#" className="hover:text-[#002f6c]">Customer Care</Link>
             </nav>
 
-            {/* Right Icons & Button */}
-            <div className="hidden md:flex items-center gap-5">
-              <Link href="#"><Phone className="w-5 h-5" /></Link>
-              <Link href="#"><MessageCircle className="w-5 h-5" /></Link>
-              <Link href="#"><Mail className="w-5 h-5" /></Link>
+            {/* Right Icons */}
+            <div className="hidden md:flex items-center gap-5 text-gray-700">
+              <Link href="#"><Phone className="w-5 h-5 hover:text-[#002f6c]" /></Link>
+              <Link href="#"><MessageCircle className="w-5 h-5 hover:text-[#002f6c]" /></Link>
+              <Link href="#"><Mail className="w-5 h-5 hover:text-[#002f6c]" /></Link>
               <Link
                 href="#"
-                className="bg-[#06a6dd] text-white px-6 py-2.5 rounded-md font-semibold hover:bg-yellow-300 transition"
+                className="bg-[#06a6dd] text-white px-6 py-2.5 rounded-md font-semibold hover:bg-yellow-300"
               >
                 Pay Now
               </Link>
@@ -120,7 +120,7 @@ export default function Header() {
 
           {/* Mobile Nav Dropdown */}
           {menuOpen && (
-            <div className="md:hidden mt-2 px-4 space-y-2 bg-white rounded-lg py-4 shadow">
+            <div className="md:hidden mt-2 px-4 space-y-2 bg-white rounded-lg py-4 shadow text-gray-700">
               <button
                 onClick={() => setShowProducts((prev) => !prev)}
                 className="w-full text-left text-sm py-1 hover:text-[#002f6c]"
@@ -132,13 +132,13 @@ export default function Header() {
               <Link href="#" className="block text-sm py-1 hover:text-[#002f6c]">Investor Zone</Link>
               <Link href="#" className="block text-sm py-1 hover:text-[#002f6c]">Customer Care</Link>
               <div className="flex gap-4 items-center mt-2">
-                <Phone className="w-5 h-5" />
-                <MessageCircle className="w-5 h-5" />
-                <Mail className="w-5 h-5" />
+                <Phone className="w-5 h-5 hover:text-[#002f6c]" />
+                <MessageCircle className="w-5 h-5 hover:text-[#002f6c]" />
+                <Mail className="w-5 h-5 hover:text-[#002f6c]" />
               </div>
               <Link
                 href="#"
-                className="mt-2 block bg-[#06a6dd] text-white text-center px-6 py-2 rounded-md font-semibold hover:bg-yellow-300 transition"
+                className="mt-2 block bg-[#06a6dd] text-white text-center px-6 py-2 rounded-md font-semibold hover:bg-yellow-300"
               >
                 Pay Now
               </Link>
@@ -156,7 +156,7 @@ export default function Header() {
                 className="absolute top-full left-0 right-0 z-40 bg-transparent"
               >
                 <div className="bg-white backdrop-blur-md rounded-2xl shadow-xl py-6 px-8 w-full max-w-screen-xl mx-auto flex flex-col gap-6 transition-all">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-y-8 gap-x-6 justify-items-center w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-y-8 gap-x-6 justify-items-center w-full">
                     {visibleProducts.map((product, idx) => (
                       <div key={idx} className="flex flex-col items-center text-center">
                         <Image
@@ -170,11 +170,9 @@ export default function Header() {
                       </div>
                     ))}
                   </div>
-
-                  {/* View More / View Less Button */}
                   <div className="w-full flex justify-center mt-4">
                     <button
-                      className="text-sm text-blue-700 font-semibold hover:underline"
+                      className="text-sm text-[#002f6c] font-semibold hover:underline"
                       onClick={() => setShowAllProducts(!showAllProducts)}
                     >
                       {showAllProducts ? "View Less" : "View More"}
@@ -192,7 +190,7 @@ export default function Header() {
 
 function TopBarLink({ icon, text }) {
   return (
-    <Link href="#" className="flex items-center gap-1 text-gray-700 hover:text-gray-900">
+    <Link href="#" className="flex items-center gap-1 text-gray-700 hover:text-[#002f6c]">
       {icon}
       <span>{text}</span>
     </Link>
