@@ -6,22 +6,15 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
 const slides = [
-  { id: 1, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161750/5_rsiwa2.jpg' },
-  { id: 2, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161750/6_pb0rpn.jpg' },
-  { id: 3, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161750/17_lfpsvy.jpg' },
-  { id: 4, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/7_fcpdco.jpg' },
-  { id: 5, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/16_l5ue1b.jpg' },
-  { id: 6, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/8_jotawl.jpg' },
-  { id: 7, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/2_s4v9fc.jpg' },
-  { id: 8, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/1_omixm9.jpg' },
-  { id: 9, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/4_e9wbcv.jpg' },
-  { id: 10, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/9_agtakb.jpg' },
-  { id: 11, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/12_qj6d4z.jpg' },
-  { id: 12, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/15_k2ruuo.jpg' },
-  { id: 13, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/11_dqfuyl.jpg' },
-  { id: 14, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161751/10_afkmsh.jpg' },
-  { id: 15, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/13_tp5nxa.jpg' },
-  { id: 16, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750161752/3_ucgkri.jpg' },
+  { id: 1, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750845217/25030460_-_HLF_-_Website_Banner_illustration_New-01_l967f8.jpg' },
+  { id: 2, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750845217/25030460_-_HLF_-_Website_Banner_illustration_New-02_r8guh5.jpg' },
+  { id: 3, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750845217/25030460_-_HLF_-_Website_Banner_illustration_New-04_bpefqa.jpg' },
+  { id: 4, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750845219/25030460_-_HLF_-_Website_Banner_illustration_New-08_ugcf2b.jpg' },
+  { id: 5, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750845216/25030460_-_HLF_-_Website_Banner_illustration_New-03_yq3dzw.jpg' },
+  { id: 6, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750845216/25030460_-_HLF_-_Website_Banner_illustration_New-05_gj7eix.jpg' },
+  { id: 7, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750845216/25030460_-_HLF_-_Website_Banner_illustration_New-06_latiff.jpg' },
+  { id: 8, image: 'https://res.cloudinary.com/dwyn5jgh3/image/upload/v1750845220/25030460_-_HLF_-_Website_Banner_illustration_New-07_ewqrqt.jpg' },
+
 ]
 
 export default function FinancingSlider() {

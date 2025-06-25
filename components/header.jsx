@@ -105,15 +105,20 @@ export default function Header() {
             </nav>
 
             {/* Right Icons */}
-            <div className="hidden md:flex items-center gap-5 text-gray-700">
-           
-              <Link
-                href="#"
-                className="bg-[#06a6dd] text-white px-6 py-2.5 rounded-md font-semibold hover:bg-blue-700"
-              >
-                Pay Now
-              </Link>
-            </div>
+           <div className="hidden md:flex items-center gap-2 text-gray-700">
+  <Link
+    href="#"
+    className="bg-[#06a6dd] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700"
+  >
+    Pay Now
+  </Link>
+  <Link
+    href="#"
+    className="bg-[#06a6dd] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700"
+  >
+    Customer Login
+  </Link>
+</div>
           </div>
 
           {/* Mobile Nav Dropdown */}
